@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --branco-primario: #FFFFFF;
+    --branco-secundario: #F9F9F9;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030C;
+
+    --fonte-principal:'Inter', sans-serif;
+    --tamanho-fonte: 16px;
+    --hover-botao-azul: #0e54aa;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-primario);
+    font-family: var(--fonte-principal);
+    
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.principal {
+    background-image: url("assets/Background.png");
+    /*Se a imagem que eu precisar colocar no meu site, tem algum valor/sentido para o usuario final, é sempre bom usar o <img src="" alt="".
+    Caso a minha imagem tenha um valor mais ilustrativo, sem muito valor pro usuario final, é interessante usar essa tag -> background-image: 
+    */
+    background-repeat: no-repeat; 
+    /*tag no repeat serve pra impedir com que o background-image se repita em toda a altura do site*/
+    background-size: contain; 
+    /* a tag contain pega toda a section */
+    align-items: center;
+    text-align: center;
+}
+
+.container__caixa{
+    margin:0 6em;
+    
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+
+}
+
+
+.container__botao{
+    background-color: var(--botao-azul);
+    color: var(--branco-primario);
+    font-size: var(--tamanho-fonte);
+    border-radius: 10px;
+    /* Esse border-radius aqui em cima serve pra arrendondar a ponta das bordas do elemento*/
+    padding: 1.2em; 
+    /* Essa unidade de medida tem como peso 1EM = 16px. Interessante resaltar que esse valor é relativo ao tamanho da fonte. Entao nesse caso vai sempre acompanhar e adaptar com o tamanho da fonte sempre ficando certinho.*/
+    display: block;
+    margin-bottom: 1em;
+    
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-secundario);
+    
+}
+
+.botao__primario:hover{
+    background-color:var(--hover-botao-azul);
+    
+}
+
+.botao__secundario:hover{
+    color: #f9f9f97e;
+    border-color: #f9f9f9a1;
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+
+.descricao__titulo{
+    font-size: 48px;
+    margin-bottom: 0.2em;
+}
+
+.descricao__texto{
+    font-size: var(--tamanho-fonte);
+    color: var(--cinza-secundario);
+    line-height: 1.5em;
+    
+}
+
+.terciario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.container__conteudo{
+    padding-right: 15%;
+
+}
+
+.botao__terciario{
+    width: 10.16em;
+    text-align: center;
+    margin-top: 1em;    
+}
+
+.botao__terciario:hover{
+    background-color: var(--hover-botao-azul);
+}
+
+
+.terciario__imagem{
+    width: 80%;
+}
+
+.quarto{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.dispositivos{
+    text-align: center;
+    
+
+}
+
+.dispositivos__titulo{
+    font-size: 3em;
+    color:var(--branco-primario);
+
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    margin: 5em 0;
+}
+
+.lista__item{ 
+    font-size: 2em;
+    color: var(--branco-primario);
+}
+
+.rodape{
+    text-align: center;
+    margin: 10em 0 5em 0;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em;
+    list-style-type: none;
+}
+
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-primario);
+}
+
+.lista__link a:hover{
+    text-decoration: none;
+    color: #f9f9f9a4;
+}
+
+
+.rodape__texto{
+    margin: 1em;
+    color: var(--cinza-secundario);
+    font-size: .8em;
+}
